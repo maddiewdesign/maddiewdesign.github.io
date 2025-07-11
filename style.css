@@ -2,9 +2,40 @@ h1 {
 font-family: "forma-djr-text", sans-serif;
 font-weight: 700;
 font-style: normal;
+font-size: 30;
 }
+
 p {
 font-family: "forma-djr-text", sans-serif;
 font-weight: 400;
 font-style: normal;
+font-size: 20;
+}
+
+
+.sidenav {
+  height: 100%;
+  width: 235px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 30px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #190B28;
+  display: block;
+}
+
+.main {
+  margin-left: 265px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 30px;}
 }
