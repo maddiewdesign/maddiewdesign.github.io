@@ -1,41 +1,97 @@
-h1 {
-font-family: "forma-djr-text", sans-serif;
-font-weight: 700;
-font-style: normal;
-font-size: 30;
+body {
+  margin: 0;
+  background-color: #fff;
+  font-family: "forma-djr-text", sans-serif;
 }
-
-p {
-font-family: "forma-djr-text", sans-serif;
-font-weight: 400;
-font-style: normal;
-font-size: 20;
-}
-
 
 .sidenav {
   height: 100%;
   width: 235px;
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
-  overflow-x: hidden;
-  padding-top: 30px;
+  background-color: white;
+  padding-top: 0px;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.logo-container {
+  width: 205px;
+  padding: 30px 0 0 0;
+  display: flex;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  margin-bottom: 5px; /* <-- add more space below logo */
+}
+
+
+.logo {
+  width: 205px;
+  height: auto;
+  display: block;
+}
+
+.name-container {
+  width: 205px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.top-line {
+  border-top: 5px solid #190B28;
+  width: 205px;
+  margin: 0 0 8px 0;   /* space below top line */
+}
+
+.bottom-line {
+  border-top: 5px solid #190B28;
+  width: 205px;
+  margin: 8px 0 0 0;   /* space above bottom line */
+}
+
+.line {
+  border-top: 5px solid #190B28;
+  width: 205px;
+  margin: 12px 0 12px 0; /* increase vertical spacing around lines */
+}
+
+.name {
+  font-weight: 700;
+  font-size: 40px;
+  color: #190B28;
+  margin: 10px 0;
+  line-height: 40px;
+}
+
+.section {
+  width: 205px;
+  text-align: left;
+  line-height: 35px;
+  margin: 30px 0; /* space above and below each section */
+}
+
+.section-title {
+  font-weight: 700;
+  color: #190B28;
+  margin: 0 0 12px 0;  /* add bottom margin here */
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
 .sidenav a {
-  padding: 6px 6px 6px 32px;
   text-decoration: none;
   font-size: 20px;
   color: #190B28;
   display: block;
-}
-
-.main {
-  margin-left: 265px; /* Same as the width of the sidenav */
+  margin: 6px 0;
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 30px;}
+  .sidenav {
+    padding-top: 30px;
+  }
 }
