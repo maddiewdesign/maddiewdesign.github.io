@@ -183,6 +183,18 @@ body {
   max-width: 205px;
 }
 
+.svg-text {
+  fill: white;
+  font-family: "forma-djr-text", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.rectangle-link:hover .svg-text {
+  font-weight: 700;
+}
+
+
 /* Responsive design */
 @media (max-width: 900px) {
   .image-row {

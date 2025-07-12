@@ -4,16 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://use.typekit.net/zqu4pie.css" />
+
   <link rel="stylesheet" href="style.css" />
+
+
   <title>Maddie W Design</title>
 </head>
 <body>
+
+  <div class="burger" id="burger">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
   <div class="main-container">
 
     <!-- Sidebar Navigation -->
     <nav class="sidenav">
       <div class="logo-container">
-        <a href="#"><img src="Images/MaddieLogo.jpg" class="logo" alt="Maddie Logo" /></a>
+        <a href="index.html"><img src="Images/MaddieLogo.jpg" class="logo" alt="Maddie Logo" /></a>
       </div>
 
       <div class="name-container">
@@ -32,86 +42,93 @@
 
       <div class="line"></div>
 
-      <p class="section-title">ABOUT ME</p>
+      <a href="#"><p class="section-title">ABOUT ME</p></a>
       <div class="line"></div>
 
-      <p class="section-title">CONTACT</p>
+      <a href="#"><p class="section-title">CONTACT</p></a>
       <div class="line"></div>
     </nav>
 
-    <!-- Main Content Area -->
+    <!-- Main Content -->
     <main class="content">
 
-      <!-- Top Row with 2 Images -->
+      <!-- Top Image Row -->
       <div class="image-row">
 
-      <div class="container">
-        <img src="Images/SpeculativeMain.jpg" class="main-image">
-        <div class="overlay overlay-orange">
-          <div class="text bottom-left">
-            <div>2024</div>
-            <div><strong>Speculative</strong></div>
-            <div><strong>Design</strong></div>
+        <div class="container">
+          <img src="Images/SpeculativeMain.jpg" class="main-image" />
+          <div class="overlay overlay-orange">
+            <div class="text bottom-left">
+              <div>2024</div>
+              <div><strong>Speculative</strong></div>
+              <div><strong>Design</strong></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="container">
-        <img src="Images/PerculiaMain.jpg" class="main-image tall-image" />
-        <div class="overlay overlay-mgreen">
-          <div class="text bottom-left">
-            <div>2024</div>
-            <div><strong>Campaign</strong></div>
-            <div><strong>NOW!</strong></div>
+        <div class="container">
+          <img src="Images/PerculiaMain.jpg" class="main-image tall-image" />
+          <div class="overlay overlay-mgreen">
+            <div class="text bottom-left">
+              <div>2024</div>
+              <div><strong>Campaign</strong></div>
+              <div><strong>NOW!</strong></div>
+            </div>
           </div>
         </div>
-      </div>
 
       </div>
 
-      <!-- Bottom Row with 2 Images and 2 Rectangles -->
+      <!-- Bottom Image Row -->
       <div class="image-row">
-              <div class="container">
-        <img src="Images/ForscreenMain.jpg" class="main-image" />
-        <div class="overlay overlay-magenta">
-          <div class="text bottom-left">
-            <div>2025</div>
-            <div><strong>Design</strong></div>
-            <div><strong>For Screen</strong></div>
+
+        <div class="container">
+          <img src="Images/ForscreenMain.jpg" class="main-image" />
+          <div class="overlay overlay-magenta">
+            <div class="text bottom-left">
+              <div>2025</div>
+              <div><strong>Design</strong></div>
+              <div><strong>For Screen</strong></div>
+            </div>
           </div>
         </div>
-      </div>
 
-            <div class="container">
-        <img src="Images/ModularMain.jpg" class="main-image"/>
-        <div class="overlay overlay-purple">
-          <div class="text bottom-left">
-            <div>2023</div>
-            <div><strong>Modular</strong></div>
-            <div><strong>Type</strong></div>
+        <div class="container">
+          <img src="Images/ModularMain.jpg" class="main-image" />
+          <div class="overlay overlay-purple">
+            <div class="text bottom-left">
+              <div>2023</div>
+              <div><strong>Modular</strong></div>
+              <div><strong>Type</strong></div>
+            </div>
           </div>
         </div>
-      </div>
 
-
-
-        <!-- Rectangles stacked vertically -->
+        <!-- Rectangles -->
         <div class="rectangles">
-          <svg class="rectangle" viewBox="0 0 205 282" xmlns="http://www.w3.org/2000/svg">
-          <rect width="205" height="282" fill="#59114D" />
-              <text x="15" y="259" font-family="forma-djr-text" font-size="40" fill="white">projects</text>
-              <text x="15" y="219" font-family="forma-djr-text" font-size="40" fill="white">additional</text>
-          </svg>
 
-          <svg class="rectangle" viewBox="0 0 205 188" xmlns="http://www.w3.org/2000/svg">
-            <rect width="205" height="188" fill="#E98A15" />
-                <text x="15" y="132" font-family="forma-djr-text" font-size="40" fill="white">logo</text>
-              <text x="15" y="172" font-family="forma-djr-text" font-size="40" fill="white">folio</text>
-          </svg>
+          <a href="#" class="rectangle-link">
+            <svg class="rectangle" viewBox="0 0 205 282" xmlns="http://www.w3.org/2000/svg">
+              <rect width="205" height="282" fill="#59114D" />
+              <text x="15" y="259" class="svg-text" font-size="40" fill="white">projects</text>
+              <text x="15" y="219" class="svg-text" fill="white">additional</text>
+            </svg>
+          </a>
+
+          <a href="#" class="rectangle-link">
+            <svg class="rectangle" viewBox="0 0 205 184" xmlns="http://www.w3.org/2000/svg">
+              <rect width="205" height="184" fill="#E98A15" />
+              <text x="15" y="128" class="svg-text" font-size="40" fill="white">logo</text>
+              <text x="15" y="168" class="svg-text" font-size="40" fill="white">folio</text>
+            </svg>
+          </a>
+
         </div>
+
       </div>
 
     </main>
   </div>
+    <script src="Burger.js"></script>
 </body>
 </html>
