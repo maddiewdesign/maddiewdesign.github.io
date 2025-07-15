@@ -1,6 +1,6 @@
 const burger = document.getElementById('burger');
 const sidenav = document.querySelector('.sidenav');
 
-burger.addEventListener('click', () => {
+burger.onclick = () => {
   sidenav.classList.toggle('open');
-});
+};
