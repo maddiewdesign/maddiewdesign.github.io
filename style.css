@@ -9,6 +9,7 @@ body {
 
 .main-container {
   display: flex;
+  min-height: 100vh;
 }
 
 /* ---------------------------
@@ -21,12 +22,13 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: white;
+  background-color: #fff;
   padding-left: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   box-sizing: border-box;
+  z-index: 900;
 }
 
 .logo-container {
@@ -83,43 +85,96 @@ body {
 }
 
 /* ---------------------------
-   CONTENT AREA
+   CONTENT AREA – DESKTOP
 ---------------------------- */
 .content {
-  margin-left: 265px; /* 235 + padding */
+  margin-left: 265px; /* allow space for fixed sidenav */
   padding: 30px;
   box-sizing: border-box;
   flex: 1;
 }
 
+/* Image rows for desktop */
 .image-row {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
   gap: 30px;
   margin-bottom: 30px;
-  align-items: stretch;
-  height: 500px;
 }
 
+.image-row.double-gap {
+  gap: 30px;
+}
+
+/* Each container takes equal space unless overridden */
 .container {
   position: relative;
-  width: 50%;
-  height: 100%;
+  flex: 1 1 0;
+  display: flex;
+  align-items: stretch;
+  height: 440px; /* uniform height for the row */
 }
 
-.main-image,
-.tall-image {
+.container.tall {
+ min-height: unset;
+}
+.container.tall .main-image {
+  object-fit: contain;
+  object-position: left;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.container.verytall{
+ min-height: unset;
+}
+.container.verytall .main-image {
+  object-fit: contain;
+  object-position: left;
+  width: 100%;
+  min-height: a;
+  max-width: 100%;
+}
+
+
+.main-image {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: none;
 }
 
+.main-image.square {
+  width: 440px; /* square images */
+  height: 440px;
+}
+
+/* Rectangles column on right */
+.rectangles {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+  flex-shrink: 0; /* don't shrink */
+  width: 205px; /* match svg width */
+}
+
+.rectangle {
+  display: block;
+  width: 205px;
+  height: auto;
+}
+
+/* Hover overlays */
 .overlay {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: .5s ease;
+  transition: opacity 0.3s ease;
 }
 
 .container:hover .overlay {
@@ -131,6 +186,7 @@ body {
 .overlay-purple { background-color: #190B28; }
 .overlay-mgreen { background-color: #074F57; }
 
+/* Overlay text */
 .text.bottom-left {
   color: white;
   font-size: 40px;
@@ -145,19 +201,7 @@ body {
   font-weight: 700;
 }
 
-.rectangles {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  flex-shrink: 0;
-}
-
-.rectangle {
-  width: 100%;
-  max-width: 205px;
-  height: auto;
-}
-
+/* SVG text */
 .svg-text {
   fill: white;
   font-family: "forma-djr-text", sans-serif;
@@ -175,14 +219,12 @@ body {
   display: none; /* only visible on mobile */
 }
 
-/* ✅ NEW LAYOUT FOR LOGO + NAME LINES ON MOBILE */
 .logo-area {
   display: flex;
-  align-items: stretch; /* make it match logo height */
+  align-items: stretch;
   position: relative;
-  width: 100%; /* full width of the topbar */
+  width: 100%;
 }
-
 
 .logo-mobile {
   width: 102px;
@@ -194,14 +236,12 @@ body {
 .name-container-mobile {
   position: relative;
   flex-grow: 1;
-  margin-left: 11px;   /* 11px gap between logo and lines */
+  margin-left: 11px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* NEW: stretch to the full remaining width */
   min-width: 0;
 }
-
 
 .top-line-mobile,
 .bottom-line-mobile {
@@ -213,11 +253,11 @@ body {
 }
 
 .top-line-mobile {
-  top: 0; /* align with top of logo */
+  top: 0;
 }
 
 .bottom-line-mobile {
-  bottom: 0; /* align with bottom of logo */
+  bottom: 0;
 }
 
 .name-mobile {
@@ -228,24 +268,21 @@ body {
   line-height: 1.2;
   position: relative;
   z-index: 1;
-  text-align: left; /* center text between lines */
+  text-align: left;
   width: 100%;
 }
-
-
-
 
 .burger {
   position: absolute;
   right: 14px;
   top: 50%;
   transform: translateY(-50%);
-  display: flex;            /* add this */
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-top: 7px;
-  width: 31px;              /* set explicit width */
-  height: 22px;             /* set explicit height */
+  width: 31px;
+  height: 22px;
   cursor: pointer;
   z-index: 1100;
 }
@@ -254,16 +291,13 @@ body {
   display: block;
   height: 4px;
   background: #190B28;
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 /* ---------------------------
    RESPONSIVE (MOBILE)
 ---------------------------- */
 @media (max-width: 900px) {
- 
-
-  /* TOPBAR LAYOUT FOR MOBILE */
   .topbar {
     display: flex;
     position: sticky;
@@ -287,54 +321,90 @@ body {
 
   .image-row {
     flex-direction: column;
-    gap: 12px;
     height: auto;
+    margin-top: 12px;
+    gap: 30px;
+  }
+
+  .image-row:first-child {
+    margin-top: 0;
   }
 
   .container {
     width: 100%;
     height: auto;
+    gap: 0;
   }
 
+  .container.tall{
+  height: auto !important;
+  width: auto !important;
+}
+  .container.verytall{
+  height: auto !important;
+}
+
+ .main-image,
+  .main-image.square {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  /* Remove fixed flex widths on containers */
+  .image-row .container {
+    flex: 1 1 auto !important;
+    max-width: 100% !important;
+  }
+
+  /* If any inline widths were set (like width: 622px) override them */
+  .image-row .container img[style] {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+
   .rectangles {
-    flex-direction: column;   /* stack vertically */
-    gap: 12px;                /* space between items */
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
   }
 
   .rectangle {
-    max-width: 100%;          /* allow full width */
-    width: 100%;              /* force full width */
-    max-height: 50%;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
   }
 
-/* hidden by default on mobile */
-.sidenav {
-  position: fixed;
-  right: -250px;
-  left: auto;
-  top: 139px;
-  width: 235px;
-  height: calc(100vh - 139px);
-  background: #fff;
-  transition: right 0.3s ease;
-  z-index: 1000;
-  padding-left: 8px;   /* Remove left padding */
-  padding-right: 12px;  /* Remove right padding */
-  box-shadow: none;  /* Remove any shadow if present */
-  border-left: none; /* Remove border if present */
-  /* Fill the gap above the menu with white */
-  margin-top: 0;
-  /* Add a white border or box-shadow to cover the gap if needed */
-  box-shadow: 0 -13px 0 0 #fff;
-}
-.sidenav .logo-container {
-  display: none;
-}
-.sidenav .name-container {
-  display: none;
-}
+  /* Hidden by default on mobile */
+  .sidenav {
+    position: fixed;
+    right: -250px;
+    left: auto;
+    top: 139px;
+    width: 235px;
+    height: calc(100vh - 139px);
+    background: #fff;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding-left: 8px;
+    padding-right: 12px;
+    border-left: none;
+    margin-top: 0;
+    box-shadow: 0 -13px 0 0 #fff;
+  }
 
-.sidenav.open {
-  right: 0;
-}
+  .sidenav .logo-container,
+  .sidenav .name-container {
+    display: none;
+  }
+
+  .sidenav.open {
+    right: 0;
+  }
 }

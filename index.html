@@ -4,71 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://use.typekit.net/zqu4pie.css" />
-
   <link rel="stylesheet" href="style.css" />
-
-
   <title>Maddie W Design</title>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="logo-area">
-    <img src="Images/MaddieLogo.jpg" class="logo-mobile" alt="Maddie Logo" />
-    <div class="name-container-mobile">
-      <div class="top-line-mobile"></div>
-      <div class="name-mobile">Maddie<br>Wardle</div>
-      <div class="bottom-line-mobile"></div>
-    </div>
-  </div>
+<div id="nav"></div>
+
+<div class="main-container">
+  <!-- SIDE NAV (fixed) is loaded from nav.html -->
   
-<div id="burger" class="burger">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-
-</div>
-
-
-  <div class="main-container">
-
-    <!-- SIDENAV (DESKTOP) -->
-    <nav class="sidenav">
-      <div class="logo-container">
-        <a href="index.html"><img src="Images/MaddieLogo.jpg" class="logo" alt="Maddie Logo" /></a>
-      </div>
-
-      <div class="name-container">
-        <div class="line top-line"></div>
-        <h1 class="name">Maddie<br />Wardle</h1>
-        <div class="line bottom-line"></div>
-      </div>
-
-      <p class="section-title">WORK</p>
-      <a href="#">Speculative Design</a>
-      <a href="#">Campaign NOW!</a>
-      <a href="#">Design for Screen</a>
-      <a href="#">Modular Type</a>
-      <a href="#">Additional Projects</a>
-      <a href="#">Logofolio</a>
-
-      <div class="line"></div>
-
-      <a href="#"><p class="section-title">ABOUT ME</p></a>
-      <div class="line"></div>
-
-      <a href="#"><p class="section-title">CONTACT</p></a>
-      <div class="line"></div>
-    </nav>
-
-    <!-- MAIN CONTENT -->
-    <main class="content">
-
-      <!-- Top Image Row -->
-      <div class="image-row">
-        <div class="container">
-          <img src="Images/SpeculativeMain.jpg" class="main-image" />
+  <main class="content">
+    <!-- Top Image Row -->
+    <div class="image-row">
+      <div class="container">
+        <a href="Speculative.html">
+          <img src="Images/SpeculativeMain.jpg" class="main-image">
           <div class="overlay overlay-orange">
             <div class="text bottom-left">
               <div>2024</div>
@@ -76,10 +27,12 @@
               <div><strong>Design</strong></div>
             </div>
           </div>
-        </div>
+        </a>
+      </div>
 
-        <div class="container">
-          <img src="Images/PerculiaMain.jpg" class="main-image tall-image" />
+      <div class="container">
+        <a href="#">
+          <img src="Images/PerculiaMain.jpg" class="main-image">
           <div class="overlay overlay-mgreen">
             <div class="text bottom-left">
               <div>2024</div>
@@ -87,13 +40,15 @@
               <div><strong>NOW!</strong></div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
+    </div>
 
-      <!-- Bottom Image Row -->
-      <div class="image-row">
-        <div class="container">
-          <img src="Images/ForscreenMain.jpg" class="main-image" />
+    <!-- Bottom Image Row -->
+    <div class="image-row double-gap">
+      <div class="container">
+        <a href="#">
+          <img src="Images/ForscreenMain.jpg" class="main-image">
           <div class="overlay overlay-magenta">
             <div class="text bottom-left">
               <div>2025</div>
@@ -101,10 +56,12 @@
               <div><strong>For Screen</strong></div>
             </div>
           </div>
-        </div>
+        </a>
+      </div>
 
-        <div class="container">
-          <img src="Images/ModularMain.jpg" class="main-image" />
+      <div class="container">
+        <a href="#">
+          <img src="Images/ModularMain.jpg" class="main-image">
           <div class="overlay overlay-purple">
             <div class="text bottom-left">
               <div>2023</div>
@@ -112,29 +69,39 @@
               <div><strong>Type</strong></div>
             </div>
           </div>
-        </div>
-
-        <div class="rectangles">
-          <a href="#" class="rectangle-link">
-            <svg class="rectangle" viewBox="0 0 205 282" xmlns="http://www.w3.org/2000/svg">
-              <rect width="205" height="282" fill="#59114D" />
-              <text x="15" y="259" class="svg-text">projects</text>
-              <text x="15" y="219" class="svg-text">additional</text>
-            </svg>
-          </a>
-          <a href="#" class="rectangle-link">
-            <svg class="rectangle" viewBox="0 0 205 184" xmlns="http://www.w3.org/2000/svg">
-              <rect width="205" height="184" fill="#E98A15" />
-              <text x="15" y="128" class="svg-text">logo</text>
-              <text x="15" y="168" class="svg-text">folio</text>
-            </svg>
-          </a>
-        </div>
+        </a>
       </div>
-    </main>
-  </div>
 
-<script src="Burger.js"></script>
+      <div class="rectangles">
+        <a href="#" class="rectangle-link">
+          <svg class="rectangle" viewBox="0 0 205 245" xmlns="http://www.w3.org/2000/svg">
+        <rect width="205" height="245" fill="#59114D" />
+        <text x="15" y="177" class="svg-text">additional</text>
+        <text x="15" y="227" class="svg-text">projects</text>
+          </svg>
+        </a>
+        <a href="#" class="rectangle-link">
+          <svg class="rectangle" viewBox="0 0 205 165" xmlns="http://www.w3.org/2000/svg">
+        <rect width="205" height="165" fill="#E98A15" />
+        <text x="15" y="105" class="svg-text">logo</text>
+        <text x="15" y="155" class="svg-text">folio</text>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav').innerHTML = data;
+      const script = document.createElement('script');
+      script.src = 'burger.js';
+      document.body.appendChild(script);
+    });
+</script>
 
 </body>
 </html>
