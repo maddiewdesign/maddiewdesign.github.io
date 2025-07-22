@@ -1,6 +1,3 @@
-/* ---------------------------
-   GLOBAL STYLES
----------------------------- */
 body {
   margin: 0;
   background-color: #fff;
@@ -12,9 +9,6 @@ body {
   min-height: 100vh;
 }
 
-/* ---------------------------
-   SIDENAV (DESKTOP)
----------------------------- */
 .sidenav {
   min-height: 100vh;
   min-width: 235px;
@@ -84,17 +78,13 @@ body {
   line-height: 2;
 }
 
-/* ---------------------------
-   CONTENT AREA – DESKTOP
----------------------------- */
 .content {
-  margin-left: 265px; /* allow space for fixed sidenav */
+  margin-left: 265px;
   padding: 30px;
   box-sizing: border-box;
   flex: 1;
 }
 
-/* Image rows for desktop */
 .image-row {
   display: flex;
   flex-wrap: nowrap;
@@ -108,18 +98,19 @@ body {
   gap: 30px;
 }
 
-/* Each container takes equal space unless overridden */
 .container {
   position: relative;
   flex: 1 1 0;
   display: flex;
   align-items: stretch;
-  height: 440px; /* uniform height for the row */
+  height: 440px;
 }
 
 .container.tall {
- min-height: unset;
+  min-height: unset;
+  max-height: 100%;
 }
+
 .container.tall .main-image {
   object-fit: contain;
   object-position: left;
@@ -128,17 +119,35 @@ body {
   max-width: 100%;
 }
 
-.container.verytall{
- min-height: unset;
+.image-row.full-width {
+  display: block;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
+
+.image-row.full-width .container {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  flex: 1 1 100%;
+}
+
+.image-row.full-width .main-image {
+  width: 100%;
+  height: auto;
+  max-height: 622px;
+  object-fit: contain;
+}
+
 .container.verytall .main-image {
   object-fit: contain;
   object-position: left;
   width: 100%;
-  min-height: a;
+  min-height: 833px;
+  height: auto;
   max-width: 100%;
 }
-
 
 .main-image {
   display: block;
@@ -149,18 +158,17 @@ body {
 }
 
 .main-image.square {
-  width: 440px; /* square images */
+  width: 440px;
   height: 440px;
 }
 
-/* Rectangles column on right */
 .rectangles {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 30px;
-  flex-shrink: 0; /* don't shrink */
-  width: 205px; /* match svg width */
+  flex-shrink: 0;
+  width: 205px;
 }
 
 .rectangle {
@@ -169,7 +177,6 @@ body {
   height: auto;
 }
 
-/* Hover overlays */
 .overlay {
   position: absolute;
   inset: 0;
@@ -186,7 +193,6 @@ body {
 .overlay-purple { background-color: #190B28; }
 .overlay-mgreen { background-color: #074F57; }
 
-/* Overlay text */
 .text.bottom-left {
   color: white;
   font-size: 40px;
@@ -197,26 +203,24 @@ body {
   text-align: left;
   line-height: 40px;
 }
+
 .text.bottom-left strong {
   font-weight: 700;
 }
 
-/* SVG text */
 .svg-text {
   fill: white;
   font-family: "forma-djr-text", sans-serif;
   font-size: 40px;
   font-weight: 400;
 }
+
 .rectangle-link:hover .svg-text {
   font-weight: 700;
 }
 
-/* ---------------------------
-   MOBILE TOPBAR
----------------------------- */
 .topbar {
-  display: none; /* only visible on mobile */
+  display: none;
 }
 
 .logo-area {
@@ -294,9 +298,6 @@ body {
   border-radius: 0;
 }
 
-/* ---------------------------
-   RESPONSIVE (MOBILE)
----------------------------- */
 @media (max-width: 900px) {
   .topbar {
     display: flex;
@@ -305,18 +306,12 @@ body {
     background: #fff;
     z-index: 1000;
     align-items: flex-start;
-    padding-top: 16px;
-    padding-bottom: 8px;
-    padding-left: 13px;
-    padding-right: 13px;
+    padding: 16px 13px 8px 13px;
   }
 
   .content {
     margin-left: 0;
-    padding-left: 13px;
-    padding-right: 13px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 13px;
   }
 
   .image-row {
@@ -336,15 +331,16 @@ body {
     gap: 0;
   }
 
-  .container.tall{
-  height: auto !important;
-  width: auto !important;
-}
-  .container.verytall{
-  height: auto !important;
-}
+  .container.tall {
+    height: auto !important;
+    width: auto !important;
+  }
 
- .main-image,
+  .container.verytall {
+    height: auto !important;
+  }
+
+  .main-image,
   .main-image.square {
     width: 100% !important;
     height: auto !important;
@@ -352,18 +348,15 @@ body {
     object-fit: contain;
   }
 
-  /* Remove fixed flex widths on containers */
   .image-row .container {
     flex: 1 1 auto !important;
     max-width: 100% !important;
   }
 
-  /* If any inline widths were set (like width: 622px) override them */
   .image-row .container img[style] {
     width: 100% !important;
     height: auto !important;
   }
-
 
   .rectangles {
     flex-direction: column;
@@ -381,7 +374,6 @@ body {
     display: block;
   }
 
-  /* Hidden by default on mobile */
   .sidenav {
     position: fixed;
     right: -250px;
@@ -392,8 +384,7 @@ body {
     background: #fff;
     transition: right 0.3s ease;
     z-index: 1000;
-    padding-left: 8px;
-    padding-right: 12px;
+    padding: 0 12px 0 8px;
     border-left: none;
     margin-top: 0;
     box-shadow: 0 -13px 0 0 #fff;
@@ -407,4 +398,32 @@ body {
   .sidenav.open {
     right: 0;
   }
+
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+.container.full,
+.main-image.full {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.main-image.full {
+  object-fit: contain;
+  object-position: center;
+}
+
+.rectangle-container {
+  display: flex;
+  align-items: stretch;
+  height: auto;
+}
+
+.rectangle-fill {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
