@@ -427,3 +427,37 @@ body {
   height: 100%;
   display: block;
 }
+
+.right-column {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 30px; /* <-- gap between the two images */
+  flex: 1; /* allow it to grow */
+}
+
+/* Special version of image-row that makes columns match heights */
+.image-row.tall-match {
+  display: flex;
+  align-items: stretch; /* make direct children equal height */
+  gap: 30px;
+  height: auto;
+}
+
+/* Only affect containers inside the tall-match row */
+.image-row.tall-match > .container {
+  height: auto;            /* remove the fixed 440px */
+}
+
+.image-row.tall-match > .container .main-image {
+  height: 100%;
+  object-fit: cover;       /* or 'contain' if you prefer */
+}
+
+.image-row.tall-match > .right-column .container {
+  flex: 1 1 0;
+  height: auto;            /* also allow these to size naturally */
+}
+
+.image-row.tall-match {
+  align-items: stretch;    /* already set, but keep here for clarity */
+}
