@@ -8,66 +8,64 @@
   <title>Maddie W Design</title>
 </head>
 <body>
-
   <div id="nav"></div>
   <div class="main-container">
     <main class="content">
 
-
-<!-- Row 1 -->
-<div class="image-row" style="align-items:flex-start;">
-  <div class="container" style="flex: 1;">
-    <img src="Images/ForscreenMain.jpg" class="main-image">
-  </div>
-  <div class="container tall-free" style="flex: 0 0 auto; margin-left: auto;">
-    <img src="Images/DesignScreen/Sketches.jpg" class="main-image" style="width: 440px; height: auto;">
-  </div>
-</div>
-
-<!-- Row 2: CollageRed alone -->
-<div class="image-row collage-row">
-  <div class="container">
-    <img src="Images/DesignScreen/CollageRed.jpg" class="main-image" style="object-fit: contain; object-position: left;">
-  </div>
-</div>
-
-<!-- Row 3: Text alone -->
-<div class="image-row double-gap">
-  <div class="container" style="flex: 0 0 440px; max-width: 440px; margin-left:auto;">
-    <p style="font-size: 16px">
-      <strong>Design for Screen</strong> is my most recent major project, and it challenged me to create an engaging digital experience using Figma.
-      <br><br>
-      I collaborated with a drag queen to design an interactive website that highlights their personality, style, and collection. The goal was to capture the energy and creativity of drag performance in a digital format.
-      <br><br>
-      One of my favourite parts of the project was learning Figma—I've really enjoyed developing my skills in the software and continue to explore its possibilities.
-      <br><br>
-      The concept centred around makeup and performance, which inspired me to create a custom typeface using liquid eyeliner. This added a handcrafted, expressive touch that ties the entire visual identity together.
-    </p>
-  </div>
-</div>
-
-
+      <!-- First Image Row -->
       <div class="image-row">
+        <div class="column left">
+          <div class="container">
+            <img src="Images/ForscreenMain.jpg" class="main-image">
+          </div>
+          <div class="container">
+            <img src="Images/DesignScreen/CollageRed.jpg" class="main-image" style="height: 580px;">
+          </div>
+        </div>
+        <div class="column right">
+          <div class="container sketch-container">
+            <img src="Images/DesignScreen/Sketches.jpg" class="main-image sketch-image">
+          </div>
+          <div class="container">
+            <p style="font-size: 16px">
+              <strong>Design for Screen</strong> is my most recent major project, and it challenged me to create an engaging digital experience using Figma.
+              <br><br>
+              I collaborated with a drag queen to design an interactive website that highlights their personality, style, and collection. The goal was to capture the energy and creativity of drag performance in a digital format.
+              <br><br>
+              One of my favourite parts of the project was learning Figma—I've really enjoyed developing my skills in the software and continue to explore its possibilities.
+              <br><br>
+              The concept centred around makeup and performance, which inspired me to create a custom typeface using liquid eyeliner. This added a handcrafted, expressive touch that ties the entire visual identity together.
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+<div class="vertical-gap"></div>
+
+
+      <!-- Second Image Row -->
+      <div class="image-row" style="margin-top: 30px;">
         <div class="container full" style="flex: 1;">
           <img src="Images/DesignScreen/FigmaProcess.jpg" class="main-image">
         </div>
         <div class="container rectangle-container hide-on-mobile" style="flex: 0 0 192px; max-width: 192px; margin-left: auto;">
-          <svg class="rectangle-fill" xmlns="http://www.w3.org/2000/svg">
+          <svg class="rectangle-fill hide-on-mobile" xmlns="http://www.w3.org/2000/svg">
             <rect x="0" y="0" width="100%" height="1567px" fill="#BD0020" />
           </svg>
         </div>
       </div>
 
-<div class="video-wrapper">
-  <iframe 
-    src="https://www.youtube.com/embed/IX34i8-3Oa4?si=WLy8QrQ4F05OyDnN" 
-    title="YouTube video" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen>
-  </iframe>
-</div>
-
+      <!-- Video Section -->
+      <div class="video-wrapper">
+        <iframe 
+          src="https://www.youtube.com/embed/IX34i8-3Oa4?si=WLy8QrQ4F05OyDnN" 
+          title="YouTube video" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
 
     </main>
   </div>
@@ -82,6 +80,5 @@
         document.body.appendChild(script);
       });
   </script>
-
 </body>
 </html>

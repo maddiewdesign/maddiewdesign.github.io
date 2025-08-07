@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://use.typekit.net/zqu4pie.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Maddie W Design</title>
+</head>
+<body>
+
+  <div id="nav"></div>
+
+  <div class="main-container">
+    <main class="content">
+
+      <div class="image-row">
+        <div class="container" style="flex: 1;">
+          <img src="Images/ModularMain.jpg" class="main-image">
+        </div>
+        <div class="container" style="flex: 0 0 auto; margin-left: auto;">
+          <img src="Images/Modulartype/Typeface.jpg" class="main-image square">
+        </div>
+      </div>
+
+      <div class="image-row double-gap">
+        <div class="container">
+          <img src="Images/Modulartype/Textures.jpg" class="main-image" style="object-fit: contain; object-position: left;">
+        </div>
+        <div class="container" style="flex: 0 0 440px; max-width: 440px;">
+          <p style="font-size: 16px">
+            <strong>Modular Type</strong> was the first project of my university experience and played a key role in deepening my understanding of typography. 
+            <br><br>
+            It gave me a deeper appreciation for how different typefaces communicate tone, structure, and personality.
+            <br><br>
+            This project took me on an in-depth exploration of typographic design. My ideas evolved constantly throughout the process, eventually leading me to create a bold, blocky typeface inspired by my hometown, Southampton—specifically the brutalist architecture of Wyndham Court.
+            <br><br>
+            The final typeface is gritty and uniform, with a stripped-back simplicity that reflects the imposing yet structured feel of the building that inspired it.
+          </p>
+        </div>
+      </div>
+
+      <div class="image-row" style="margin-top: 30px;">
+        <div class="container full" style="flex: 1;">
+          <img src="Images/Modulartype/PosterMock.jpg" class="main-image">
+        </div>
+        <div class="container rectangle-container hide-on-mobile" style="flex: 0 0 192px; max-width: 192px; margin-left: auto;">
+          <svg class="rectangle-fill hide-on-mobile" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="100%" height="1567px" fill="#212121" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="image-row">
+        <div class="container full" style="flex: 1;">
+          <img src="Images/Modulartype/SpecFront.jpg" class="main-image">
+        </div>
+                <div class="container full" style="flex: 1;">
+          <img src="Images/Modulartype/SpecBack.jpg" class="main-image">
+        </div>
+        <div class="container rectangle-container hide-on-mobile" style="flex: 0 0 192px; max-width: 192px; margin-left: auto;">
+          <svg class="rectangle-fill hide-on-mobile" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="100%" height="1567px" fill="#FFFFFF" />
+          </svg>
+        </div>
+      </div>
+
+
+    </main>
+  </div>
+
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav').innerHTML = data;
+        const script = document.createElement('script');
+        script.src = 'burger.js';
+        document.body.appendChild(script);
+      });
+  </script>
+
+</body>
+</html>

@@ -494,3 +494,42 @@ body {
   position: relative;
   z-index: 1; /* make sure it appears above background */
 }
+
+
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* space between stacked items */
+}
+
+.column.right {
+  max-width: 428px;
+  max-height: 100%;
+  flex: 1 1 428px;
+}
+
+.column.left {
+  flex: 1 1 0;
+}
+
+
+.sketch-container {
+  width: 100%;
+  height: auto;
+}
+
+.sketch-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.vertical-gap {
+  height: 53px;
+  width: 100%;
+  display: block;
+  flex: none;
+}
+
