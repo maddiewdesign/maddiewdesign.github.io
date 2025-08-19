@@ -80,7 +80,7 @@ body {
 
 .content {
   margin-left: 265px;
-  padding: 30px;
+  padding: 30px 30px 30px 30px;
   box-sizing: border-box;
   flex: 1;
 }
@@ -298,6 +298,7 @@ body {
   border-radius: 0;
 }
 
+/* ---------- Mobile Styles ---------- */
 @media (max-width: 900px) {
   .topbar {
     display: flex;
@@ -402,8 +403,9 @@ body {
   .hide-on-mobile {
     display: none;
   }
-    .collage-shift {
-    margin-top: 0; /* don't shift on smaller screens */
+
+  .collage-shift {
+    margin-top: 0;
   }
 }
 
@@ -411,10 +413,22 @@ body {
 .main-image.full {
   width: auto;
   height: auto;
-  max-width: 100%;
+  max-height: 550px;
 }
 
 .main-image.full {
+  object-fit: contain;
+  object-position: center;
+}
+
+.container.fuller,
+.main-image.fuller {
+  width: auto;
+  height: auto;
+  max-height: 800px;
+}
+
+.main-image.fuller {
   object-fit: contain;
   object-position: center;
 }
@@ -433,41 +447,35 @@ body {
 
 .right-column {
   display: flex;
-  flex-direction: column; /* stack vertically */
-  gap: 30px; /* <-- gap between the two images */
-  flex: 1; /* allow it to grow */
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
 }
 
-/* Special version of image-row that makes columns match heights */
 .image-row.tall-match {
   display: flex;
-  align-items: stretch; /* make direct children equal height */
+  align-items: stretch;
   gap: 30px;
   height: auto;
 }
 
-/* Only affect containers inside the tall-match row */
 .image-row.tall-match > .container {
-  height: auto;            /* remove the fixed 440px */
+  height: auto;
 }
 
 .image-row.tall-match > .container .main-image {
   height: 100%;
-  object-fit: cover;       /* or 'contain' if you prefer */
+  object-fit: cover;
 }
 
 .image-row.tall-match > .right-column .container {
   flex: 1 1 0;
-  height: auto;            /* also allow these to size naturally */
+  height: auto;
 }
 
-.image-row.tall-match {
-  align-items: stretch;    /* already set, but keep here for clarity */
-}
 .video-wrapper {
   position: relative;
   width: 100%;
-  /* For a standard 16:9 aspect ratio, use 56.25% (9/16) */
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
@@ -486,21 +494,21 @@ body {
   height: auto;
   align-items: flex-start;
 }
+
 .container.tall-free .main-image {
   object-fit: contain;
 }
+
 .collage-row {
-  margin-top: -200px; /* tweak until it sits nicely in the gap */
+  margin-top: -200px;
   position: relative;
-  z-index: 1; /* make sure it appears above background */
+  z-index: 1;
 }
-
-
 
 .column {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* space between stacked items */
+  gap: 30px;
 }
 
 .column.right {
@@ -512,7 +520,6 @@ body {
 .column.left {
   flex: 1 1 0;
 }
-
 
 .sketch-container {
   width: 100%;
@@ -531,5 +538,55 @@ body {
   width: 100%;
   display: block;
   flex: none;
+}
+
+/* Align-to-first rows */
+.image-row.align-to-first {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+  width: 100%;
+}
+
+.reference-img {
+  height: 440px;
+  display: flex;
+  align-items: stretch;
+}
+
+.reference-img .main-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.image-row.align-to-first .container:not(.reference-img) {
+  height: 440px;
+  display: flex;
+  align-items: stretch;
+}
+
+.image-row.align-to-first .container:not(.reference-img) .main-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .image-row.align-to-first {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .reference-img,
+  .image-row.align-to-first .container {
+    max-width: 100%;
+  }
+  .main-image {
+    max-height: 50vh;
+    width: 100%;
+    height: auto;
+  }
 }
 

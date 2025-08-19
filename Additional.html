@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://use.typekit.net/zqu4pie.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Maddie W Design</title>
+</head>
+<body>
+
+  <div id="nav"></div>
+
+  <div class="main-container">
+    <main class="content">
+      
+
+
+<div class="image-row">
+  <div class="container full">
+    <img src="Images/AdditionalProjects/HeathlandsSpread.jpg" class="main-image">
+  </div>
+  <div class="container full">
+    <img src="Images/AdditionalProjects/HeathOGSmear.jpg" class="main-image">
+  </div>
+</div>
+
+
+<div class="image-row">
+  <div class="container full">
+    <img src="Images/AdditionalProjects/HeathSmear.jpg" class="main-image">
+  </div>
+  <div class="container full">
+    <img src="Images/AdditionalProjects/Additional Projects-34.jpg" class="main-image">
+  </div>
+</div>
+
+<div class="image-row">
+  <div class="container fuller">
+    <img src="Images/AdditionalProjects/FacePoster.jpg" class="main-image">
+  </div>
+  <div class="container fuller">
+    <img src="Images/AdditionalProjects/FaceType.jpg" class="main-image">
+  </div>
+</div>
+
+<div class="image-row">
+  <div class="container full">
+    <img src="Images/AdditionalProjects/WICIPoster.jpg" class="main-image">
+  </div>
+  <div class="container full">
+    <img src="Images/AdditionalProjects/Additional Projects-41.jpg" class="main-image">
+  </div>
+</div>
+
+<div class="image-row tall-match">
+  <!-- Left column -->
+  <div class="container">
+    <img src="Images/AdditionalProjects/Additional Projects-42.jpg" class="main-image">
+  </div>
+
+  <!-- Right column -->
+  <div class="right-column">
+    <div class="container">
+      <img src="Images/AdditionalProjects/Carrot.jpg" class="main-image">
+    </div>
+    <div class="container">
+
+    </div>
+  </div>
+</div>
+
+
+    </main>
+  </div>
+
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav').innerHTML = data;
+        const script = document.createElement('script');
+        script.src = 'burger.js';
+        document.body.appendChild(script);
+      });
+  </script>
+
+</body>
+</html>
