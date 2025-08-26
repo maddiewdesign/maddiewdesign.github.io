@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="https://use.typekit.net/zqu4pie.css" />
   <link rel="stylesheet" href="style.css" />
   <title>Maddie W Design</title>
+  
+  <link href="LightBox2/css/lightbox.css" rel="stylesheet" />
+
 </head>
 <body>
 
@@ -92,6 +95,11 @@
   </main>
 </div>
 
+<script src="LightBox2/js/lightbox-plus-jquery.min.js"></script>
+
+  <!-- LightBox2 Made by Lokesh Dhakar https://lokeshdhakar.com-->
+
+
 <script>
   fetch('nav.html')
     .then(response => response.text())
@@ -100,6 +108,18 @@
       const script = document.createElement('script');
       script.src = 'burger.js';
       document.body.appendChild(script);
+    })
+    .finally(() => {
+      // Auto-wrap all images in Lightbox gallery links
+      document.querySelectorAll('.content img').forEach(img => {
+        if (img.closest('a')) return; // skip if already linked
+        const link = document.createElement('a');
+        link.href = img.src;
+        link.setAttribute('data-lightbox', 'gallery');
+        if (img.alt) link.setAttribute('data-title', img.alt);
+        img.parentNode.insertBefore(link, img);
+        link.appendChild(img);
+      });
     });
 </script>
 

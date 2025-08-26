@@ -302,7 +302,7 @@ body {
 @media (max-width: 900px) {
   .topbar {
     display: flex;
-    position: sticky;
+    position: fixed;
     top: 0;
     background: #fff;
     z-index: 1000;
@@ -589,4 +589,6 @@ body {
     height: auto;
   }
 }
+
+
 
