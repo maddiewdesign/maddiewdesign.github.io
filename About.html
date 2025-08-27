@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://use.typekit.net/zqu4pie.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Maddie W Design</title>
+
+</head>
+<body>
+
+<div id="nav"></div>
+
+  <div class="main-container">
+    <main class="content">
+      
+
+
+<div class="image-row">
+  <!-- Image -->
+  <div class="container">
+    <img src="Images/Maddie.png" class="main-image square">
+  </div>
+
+  <!-- Text Column -->
+  <div class="text-column">
+    <div class="container">
+      <p style="font-size: 16px">
+        Hi! I’m Maddie, a graphic designer heading into my third year at university—but I’ve been immersed in design since college and haven’t looked back since.
+        <br><br>
+        I love creating bold, personality-packed work that helps people and brands express who they really are. Whether it’s branding, digital design, or packaging, I enjoy turning ideas into visuals that are focused, meaningful and memorable.
+        <br><br>
+        I’m confident using the Adobe suite, a big fan of Figma, and always looking for new ways to push my creativity.
+      </p>
+    </div>
+<div class="text-column">
+    <div class="container">
+      <p style="font-size: 16px">
+        When I’m not designing, you’ll probably find me at a live music gig, getting a bit too competitive with a puzzle, or on a nature walk that almost certainly lasts longer than planned.
+        <br><br>
+        My goal is to work across different areas of graphic design, growing my skills and collaborating on projects that connect with real people.
+        <br><br>
+        Let’s make something great together.
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+    </main>
+  </div>
+
+
+<script>
+  fetch('nav.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('nav').innerHTML = data;
+      const script = document.createElement('script');
+      script.src = 'burger.js';
+      document.body.appendChild(script);
+    })
+</script>
+
+</body>
+</html>

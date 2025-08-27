@@ -317,6 +317,7 @@ body {
   .content {
     margin-left: 0;
     padding: 20px 13px;
+    padding-top: 126px; /* Adjust to match your .topbar height */
   }
 
   .image-row {
@@ -596,3 +597,10 @@ body {
 
 
 
+
+.text-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* space between paragraphs */
+  max-width: 440px; /* keeps text column tidy */
+}
