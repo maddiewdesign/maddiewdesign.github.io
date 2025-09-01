@@ -641,6 +641,37 @@ body {
     max-width: 100%;
     object-fit: contain;
   }
+  .about-page .container.image-fit {
+    max-width: 90vw;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .about-page .container.image-fit .main-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  .about-page .line.full {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .about-page .rectangles,
+  .about-page .rectangle {
+    width: 100%;
+    max-width: 100%;
+  }
+  .about-page form {
+    max-width: 100%;
+    width: 100%;
+  }
+  .about-page form .rectangle {
+    width: 100% !important;
+    min-width: 0;
+    max-width: 100% !important;
+  }
 }
 
 .container.image-fit {
