@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://use.typekit.net/zqu4pie.css" />
   <link rel="stylesheet" href="style.css" />
   <title>Maddie W Design</title>
+
 </head>
 <body>
 
@@ -47,7 +48,7 @@
     <!-- Bottom Image Row -->
     <div class="image-row double-gap">
       <div class="container">
-        <a href="#">
+        <a href="ForScreen.html">
           <img src="Images/ForscreenMain.jpg" class="main-image">
           <div class="overlay overlay-magenta">
             <div class="text bottom-left">
@@ -60,7 +61,7 @@
       </div>
 
       <div class="container">
-        <a href="#">
+        <a href="Modular.html">
           <img src="Images/ModularMain.jpg" class="main-image">
           <div class="overlay overlay-purple">
             <div class="text bottom-left">
@@ -73,14 +74,14 @@
       </div>
 
       <div class="rectangles">
-        <a href="#" class="rectangle-link">
+        <a href="Additional.html" class="rectangle-link">
           <svg class="rectangle" viewBox="0 0 205 245" xmlns="http://www.w3.org/2000/svg">
         <rect width="205" height="245" fill="#59114D" />
         <text x="15" y="177" class="svg-text">additional</text>
         <text x="15" y="227" class="svg-text">projects</text>
           </svg>
         </a>
-        <a href="#" class="rectangle-link">
+        <a href="Logofolio.html" class="rectangle-link">
           <svg class="rectangle" viewBox="0 0 205 165" xmlns="http://www.w3.org/2000/svg">
         <rect width="205" height="165" fill="#E98A15" />
         <text x="15" y="105" class="svg-text">logo</text>
@@ -92,6 +93,7 @@
   </main>
 </div>
 
+
 <script>
   fetch('nav.html')
     .then(response => response.text())
@@ -100,7 +102,7 @@
       const script = document.createElement('script');
       script.src = 'burger.js';
       document.body.appendChild(script);
-    });
+    })
 </script>
 
 </body>
