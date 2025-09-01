@@ -53,7 +53,6 @@ body {
   margin: 8px 0;
 }
 
-
 .name {
   font-weight: 700;
   font-size: 40px;
@@ -80,7 +79,7 @@ body {
 }
 
 .content {
-  margin-left: 265px;
+  margin-left: 235px;
   padding: 30px 30px 30px 30px;
   box-sizing: border-box;
   flex: 1;
@@ -299,7 +298,6 @@ body {
   border-radius: 0;
 }
 
-/* ---------- Mobile Styles ---------- */
 @media (max-width: 900px) {
   .topbar {
     display: flex;
@@ -307,7 +305,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    width: 100vw;           /* Ensure full viewport width */
+    width: 100vw;
     background: #fff;
     z-index: 1000;
     align-items: flex-start;
@@ -318,7 +316,7 @@ body {
   .content {
     margin-left: 0;
     padding: 20px 13px;
-    padding-top: 126px; /* Adjust to match your .topbar height */
+    padding-top: 126px;
   }
 
   .image-row {
@@ -413,11 +411,11 @@ body {
   .collage-shift {
     margin-top: 0;
   }
-    .container.image-fit {
-    flex: 1 1 auto !important;  /* act like a normal container */
+  .container.image-fit {
+    flex: 1 1 auto !important;
     width: 100% !important;
     height: auto !important;
-    display: flex !important;   /* back to default flex behavior */
+    display: flex !important;
   }
 
   .container.image-fit .main-image {
@@ -557,7 +555,6 @@ body {
   flex: none;
 }
 
-/* Align-to-first rows */
 .image-row.align-to-first {
   display: flex;
   align-items: stretch;
@@ -605,13 +602,49 @@ body {
     width: 100%;
     height: auto;
   }
-    .hide-mobile {
+  .hide-mobile {
     display: none !important;
+  }
+   /* Stack About columns */
+  .about-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100% !important;
+    flex: none;
+  }
+
+  .line.full {
+    width: 100vw;  /* exactly viewport width */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Centre the About main image */
+  .container.image-fit {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    max-width: 300px; /* keeps image from being too huge */
+  }
+
+  .container.image-fit .main-image {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
   }
 }
 
 .container.image-fit {
-  flex: 0 0 auto;   /* don’t stretch width */
+  flex: 0 0 auto;
   aspect-ratio: 1 / 1;
   height: auto;
   max-width: 537px;
@@ -621,20 +654,20 @@ body {
 }
 .container.image-fit .main-image {
   display: block;
-  width: auto;   /* let the image define its own size */
+  width: auto;
   height: auto;
-  max-width: 100%; /* still keep responsiveness */
+  max-width: 100%;
 }
 
 .line-with-text {
-  width: 100%;                  /* take full width of page/content */
+  width: 100%;
   display: flex;
-  flex-direction: column;        /* stack text on top of line */
-  align-items: flex-start;       /* text stays aligned left */
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .line-text {
-  margin-bottom: -2px;           /* 15px gap above line */
+  margin-bottom: -2px;
   font-size: 40px;
   font-weight: 700;
   color: #190B28;
@@ -642,28 +675,26 @@ body {
 
 .line.full {
   border-top: 5px solid #190B28;
-  width: 100%;                   /* stretch all the way across */
+  width: 100%;
 }
 
-/* Force the left container to match height of right column */
 .about-columns {
   display: flex;
-  align-items: stretch; /* makes both sides equal height */
+  align-items: stretch;
   gap: 30px;
 }
 
-
 .about-left {
   width: 197px;
-  flex-shrink: 0; /* keep fixed width */
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px; /* space between text and buttons */
+  gap: 12px;
 }
 
 .about-right {
   width: 417px;
-  flex-shrink: 0; /* fixed width */
+  flex-shrink: 0;
 }
 
 form {
@@ -671,7 +702,7 @@ form {
   flex-direction: column;
   gap: 15px;
   width: 100%;
-  max-width: 512px; /* matches screenshot */
+  max-width: 512px;
 }
 
 .form-row {
@@ -689,7 +720,7 @@ textarea {
   width: 100%;
   padding: 10px;
   border: none;
-  background: #eaeaea; /* matches grey in screenshot */
+  background: #eaeaea;
   font-size: 16px;
   font-family: inherit;
   box-sizing: border-box;
@@ -700,7 +731,6 @@ textarea {
   resize: vertical;
 }
 
-/* Override button rectangle size */
 form .rectangle {
   width: 512px !important;
   height: 71px !important;
