@@ -53,6 +53,7 @@ body {
   margin: 8px 0;
 }
 
+
 .name {
   font-weight: 700;
   font-size: 40px;
@@ -216,7 +217,7 @@ body {
 }
 
 .rectangle-link:hover .svg-text {
-  font-weight: 700;
+  font-weight: 700 !important;
 }
 
 .topbar {
@@ -412,6 +413,17 @@ body {
   .collage-shift {
     margin-top: 0;
   }
+    .container.image-fit {
+    flex: 1 1 auto !important;  /* act like a normal container */
+    width: 100% !important;
+    height: auto !important;
+    display: flex !important;   /* back to default flex behavior */
+  }
+
+  .container.image-fit .main-image {
+    width: 100% !important;
+    height: auto !important;
+  }
 }
 
 .container.full,
@@ -593,14 +605,104 @@ body {
     width: 100%;
     height: auto;
   }
+    .hide-mobile {
+    display: none !important;
+  }
+}
+
+.container.image-fit {
+  flex: 0 0 auto;   /* don’t stretch width */
+  aspect-ratio: 1 / 1;
+  height: auto;
+  max-width: 537px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container.image-fit .main-image {
+  display: block;
+  width: auto;   /* let the image define its own size */
+  height: auto;
+  max-width: 100%; /* still keep responsiveness */
+}
+
+.line-with-text {
+  width: 100%;                  /* take full width of page/content */
+  display: flex;
+  flex-direction: column;        /* stack text on top of line */
+  align-items: flex-start;       /* text stays aligned left */
+}
+
+.line-text {
+  margin-bottom: -2px;           /* 15px gap above line */
+  font-size: 40px;
+  font-weight: 700;
+  color: #190B28;
+}
+
+.line.full {
+  border-top: 5px solid #190B28;
+  width: 100%;                   /* stretch all the way across */
+}
+
+/* Force the left container to match height of right column */
+.about-columns {
+  display: flex;
+  align-items: stretch; /* makes both sides equal height */
+  gap: 30px;
 }
 
 
-
-
-.text-column {
+.about-left {
+  width: 197px;
+  flex-shrink: 0; /* keep fixed width */
   display: flex;
   flex-direction: column;
-  gap: 30px; /* space between paragraphs */
-  max-width: 440px; /* keeps text column tidy */
+  gap: 12px; /* space between text and buttons */
+}
+
+.about-right {
+  width: 417px;
+  flex-shrink: 0; /* fixed width */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 512px; /* matches screenshot */
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #eaeaea; /* matches grey in screenshot */
+  font-size: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Override button rectangle size */
+form .rectangle {
+  width: 512px !important;
+  height: 71px !important;
+  display: block;
 }
