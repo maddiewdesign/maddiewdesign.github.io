@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://use.typekit.net/zqu4pie.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Maddie W Design</title>
+</head>
+<body>
+
+  <div id="nav"></div>
+
+  <div class="main-container">
+    <main class="content">
+      <div class="image-row">
+        <div class="container">
+          <div class="line-with-text">
+            <div class="line-text">Form submitted successfully</div>
+            <div class="line full"></div>
+            <div class="about-columns">
+              <div class="about-left" style="width: auto;">
+                <p>Thanks for the message! I will be in touch soon.</p>
+                <button onclick="history.back()" class="rectangle-link form-success-btn" style="background:none; border:none; padding:0; cursor:pointer;">
+                  <svg class="rectangle" viewBox="0 0 512 71" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="71" fill="#59114D" />
+                    <text x="50%" y="35.5" class="svg-text" style="font-size:20px; font-weight:500; line-height:16px; text-anchor:middle; dominant-baseline:middle;">Back</text>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav').innerHTML = data;
+        const script = document.createElement('script');
+        script.src = 'burger.js';
+        document.body.appendChild(script);
+      });
+  </script>
+
+</body>
+</html>

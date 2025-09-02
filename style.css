@@ -767,3 +767,15 @@ form .rectangle {
   height: 71px !important;
   display: block;
 }
+.form-success-btn {
+  width: 100%;
+  max-width: 512px; /* Match the width of .line.full or .line-text if needed */
+  display: block;
+  margin-top: 20px;
+}
+
+.form-success-btn .rectangle {
+  width: 100%;
+  height: 71px;
+  display: block;
+}

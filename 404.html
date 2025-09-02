@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://use.typekit.net/zqu4pie.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Maddie W Design</title>
+</head>
+<body>
+
+  <div id="nav"></div>
+
+  <div class="main-container">
+    <main class="content">
+      <div class="image-row">
+        <div class="container">
+          <div class="line-with-text">
+            <div class="line-text">Error 404</div>
+            <div class="line full"></div>
+            <div class="about-columns">
+              <div class="about-left" style="width: auto;">
+                <p>Big oops! Appears there is no website here</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav').innerHTML = data;
+        const script = document.createElement('script');
+        script.src = 'burger.js';
+        document.body.appendChild(script);
+      });
+  </script>
+
+</body>
+</html>
